@@ -22,3 +22,9 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# IntelliJ IDEA meta information
+.idea
+
+# VSCode meta information
+.vscode
