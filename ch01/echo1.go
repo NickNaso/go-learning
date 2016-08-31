@@ -1,15 +1,15 @@
-package ch01
+package main
 
 import (
-    "fmt"
-    "os"
+	"fmt"
+	"os"
 )
 
-func main ()  {
+func main() {
 	var s, sep string
-	for i:= 1; i < len(os.Args); i++ {
+	for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]
 		sep = " "
 	}
-	fmt.Println(s);
+	fmt.Println(s)
 }

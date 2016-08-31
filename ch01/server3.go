@@ -1,9 +1,9 @@
 package main
 
 import (
-	"net/http"
 	"fmt"
 	"log"
+	"net/http"
 	"sync"
 )
 
@@ -13,7 +13,7 @@ var count int
 func main() {
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/count", counter)
-	log.Fatal(http.ListenAndServe("localhost:8000", nil))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8000", nil))
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -21,7 +21,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	count++
 	mu.Unlock()
 	fmt.Fprintf(w, "%s %s %s\n", r.Method, r.URL, r.Proto)
-	for k,v := range r.Header {
+	for k, v := range r.Header {
 		fmt.Fprintf(w, "Header[%q] = %q\n", k, v)
 	}
 	fmt.Fprintf(w, "Host = %q\n", r.Host)
@@ -29,7 +29,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if err := r.ParseForm(); err != nil {
 		log.Print(err)
 	}
-	for k,v := range r.Form{
+	for k, v := range r.Form {
 		fmt.Fprintf(w, "Form[%q] = %q\n", k, v)
 	}
 }
