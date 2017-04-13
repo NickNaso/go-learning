@@ -1,5 +1,4 @@
 # Learning Go
-## The Go Programming Language
 
 ### All the examples are inspired on code present on the following books:
 
