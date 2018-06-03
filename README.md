@@ -2,9 +2,9 @@
 
 ### All the examples are inspired on code present on the following books:
 
-## The Go Programming Language
+## Get Programming with Go
 
-You can find it [here](https://www.amazon.com/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440).
+You can find it [here](https://www.manning.com/books/get-programming-with-go).
 
 ## Go in Action
 
